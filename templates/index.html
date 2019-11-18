@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<meta charset="utf-8">
+    <title>MyFutbol.com</title>
+    <meta name="description" content="">	
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="icon" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png')}}" type="{{ url_for('static', filename='image/x-icon')}}" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ url_for('static', filename='img/favicon/favicon-144x144.png')}}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ url_for('static', filename='img/favicon/favicon-72x72.png')}}">
+	<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/favicon/favicon-54x54.png')}}">
+	
+	<!-- CSS
+	================================================== -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+	
+	<!-- Template styles-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+	<!-- Responsive styles-->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css')}}">
+	<!-- Animation -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css')}}">
+	<!-- Prettyphoto -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/prettyPhoto.css')}}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.css')}}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css')}}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/cd-hero.css')}}">
+	<!-- Style Swicther -->
+	<link id="style-switch" href="{{ url_for('static', filename='css/presets/preset3.css')}}" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+	
+<body>
+	<div class="body-inner">
+
+	<!-- Header start -->
+	<header id="header" class="navbar-fixed-top header" role="banner">
+		<div class="container">
+			<div class="row">
+				<!-- Logo start -->
+				<div class="navbar-header">
+				   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+				    <div class="navbar-brand navbar-bg">
+					    <a href="{{ url_for('static', filename='index.html')}}">
+					    	<img class="img-responsive" src="{{ url_for('static', filename='images/logo.png')}}" alt="logo">
+					    </a> 
+				    </div>                   
+				</div><!--/ Logo end -->
+				<nav class="collapse navbar-collapse clearfix" role="navigation">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown active">
+                       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Inicio <i class="fa fa-angle-down"></i></a>
+                       		<div class="dropdown-menu">
+	                    	</div>
+	                    </li>
+						<li class="dropdown">
+                       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">retos <i class="fa fa-angle-down"></i></a>
+                       		<div class="dropdown-menu">
+								
+	                    	</div>
+	                    </li>
+						<li class="dropdown">
+                       		<a href="/mercado?usuario={{usuario}}">mercado<i class="fa fa-angle-down" ></i></a>
+	                    </li>
+	                    <li class="dropdown">
+                       		<a href="#" class="dropdown-toggle" data-toggle="dropdown">mi equipo <i class="fa fa-angle-down"></i></a>
+	                    </li>
+						<div class="dropdown-menu"></div>
+							<li><a href="/logout"> {{usuario}} </a></li>
+						<div class="dropdown-menu"></div>
+							<li><a href="#"> {{coins}} </a></li>
+						<div class="dropdown-menu"></div>
+							<li><a href="#"> {{admin}} </a></li>
+                    </ul>
+				</nav><!--/ Navigation end -->
+			</div><!--/ Row end -->
+		</div><!--/ Container end -->
+	</header><!--/ Header end -->
+
+	<!-- Slider start -->
+	<section id="home" class="no-padding">	
+    	<div id="main-slide" class="cd-hero">
+			<ul class="cd-hero-slider">
+				<li class="selected">
+					<div class="overlay2">
+						<img class="" src="{{ url_for('static', filename='images/slider/premier.jpg')}}" alt="slider">
+					</div>
+					<div class="cd-full-width">
+						<h2>Lo ultimo en futbol internacional</h2>
+						<h3>inicia ya con tu cuenta</h3>
+						<a href="/register" class="btn btn-primary white cd-btn">Registrarme ya</a>
+						<a href="/login" class="btn btn-primary solid cd-btn">iniciar</a>
+					</div> <!-- .cd-full-width -->
+				</li>
+				<li>
+					<div class="overlay2">
+						<img class="" src="{{ url_for('static', filename='images/slider/ligue1.jpg')}}" alt="slider">
+					</div>
+					<div class="cd-half-width">
+						<h2>No te pierdas de ninguna notica del mundo del futbol</h2>
+						<p>Todos los resultad y traspasos de todas las ligas y competiciones europeas</p>
+						<a href="#0" class="cd-btn btn btn-primary solid">Ver resultados</a>
+					</div> <!-- .cd-half-width -->
+
+					<div class="cd-half-width cd-img-container">
+						<img src="{{ url_for('static', filename='images/slider/neymar.jpg')}}" alt="">
+					</div> <!-- .cd-half-width.cd-img-container -->
+				</li>
+				<li>
+					<div class="overlay2">
+						<img class="" src="{{ url_for('static', filename='images/slider/champions league.jpg')}}" alt="slider">
+					</div>
+					<div class="cd-half-width cd-img-container img-right">
+						<img src="{{ url_for('static', filename='images/slider/copa.png')}}" alt="">
+					</div> <!-- .cd-half-width.cd-img-container -->
+					<div class="cd-half-width">
+						<h2>Sigue tus competiciones favoritas</h2>
+						<a href="#0" class="cd-btn btn btn-primary white">Ver Competiciones</a>
+					</div> <!-- .cd-half-width -->
+				</li>
+				<li class="cd-bg-video">
+					<div class="cd-full-width">
+						<h2>Arma tu equipo</h2>
+						<h3>Compra a todos los jugadores de todas las ligas</h3>
+
+						<a href="#0" class="cd-btn btn btn-primary solid">Crear jugador</a>
+					</div> <!-- .cd-full-width -->
+
+					<div class="cd-bg-video-wrapper " data-video="{{ url_for('static', filename='videos/video')}}">
+						<!-- video element will be loaded using jQuery -->
+					</div> <!-- .cd-bg-video-wrapper -->
+				</li>
+			</ul> <!--/ cd-hero-slider -->
+
+		<div class="cd-slider-nav">
+			<nav>
+				<span class="cd-marker item-1"></span>
+				<ul>
+					<li class="selected"><a href="#0"><i class="fa fa-caret-square-o-right"></i> iniciar</a></li>
+					<li><a href="#0"><i class="fa fa-tablet"></i> Noticias</a></li>
+					<li><a href="#0"><i class="fa fa-star-o"></i> Copas</a></li>
+					<li class="video"><a href="#0"><i class="fa fa-futbol-o"></i> Juego</a></li>
+				</ul>
+			</nav> 
+		</div> <!-- .cd-slider-nav -->
+
+		</div><!--/ Main slider end -->    	
+    </section> <!--/ Slider end -->
+
+
+    <!-- Service box start -->
+	<section id="service" class="service angle">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 heading">
+					<span class="title-icon pull-left"><i class="fa fa-check"></i></span>
+					<h2 class="title">Crea tu jugador<span class="title-desc">Gana puntos y mejora a tu jugador</span></h2>
+				</div>
+			</div><!-- Title row end -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".3s">
+						<div class="service-content text-center">
+							<span class="service-icon icon-pentagon"><i class="fa fa-check-square-o"></i></span>
+							<h3>Acierta resultados</h3>
+							<p>al acertar resultados obtendras puntos para mejorar a tu jugador</p>
+						</div>
+					</div><!--/ End first service -->
+
+					<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".8s" >
+						<div class="service-content text-center">
+							<span class="service-icon icon-pentagon"><i class="fa fa-futbol-o"></i></span>
+							<h3>Compra jugadores</h3>
+							<p>Obten todos los jugadores de todas las ligas</p>
+						</div>
+						
+					</div><!--/ End Second service -->
+
+					<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay="1.3s">
+						<div class="service-content text-center">
+							<span class="service-icon icon-pentagon"><i class="fa fa-question"></i></span>
+							<h3>Retos diarios</h3>
+							<p>Al ganar los retos diarios, obtendras valiosas recompenzas</p>
+						</div>
+					</div><!--/ End Third service -->
+
+				</div>
+			</div><!-- Content row end -->
+		</div><!--/ Container end -->
+	</section><!--/ Service box end -->
+   
+
+	<!-- Copyright start -->
+	<section id="copyright" class="copyright angle">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="footer-social unstyled">
+						<li>
+							<a title="Twitter" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+							</a>
+							<a title="Facebook" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+							</a>
+							<a title="Google+" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+							</a>
+							<a title="linkedin" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+							</a>
+							<a title="Pinterest" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
+							</a>
+							<a title="Skype" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
+							</a>
+							<a title="Dribble" href="#">
+								<span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div><!--/ Row end -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="copyright-info">
+         			 &copy; Copyright 2019 Themefisher. <span>Designed by <a href="https://themefisher.com">Themefisher.com</a></span>
+        			</div>
+				</div>
+			</div><!--/ Row end -->
+		   <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+				<button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+			</div>
+		</div><!--/ Container end -->
+	</section><!--/ Copyright end -->
+
+	<!-- Javascript Files
+	================================================== -->
+
+	<!-- initialize jQuery Library -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js')}}"></script>
+	<!-- Bootstrap jQuery -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+	<!-- Style Switcher -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/style-switcher.js')}}"></script>
+	<!-- Owl Carousel -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.js')}}"></script>
+	<!-- PrettyPhoto -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.prettyPhoto.js')}}"></script>
+	<!-- Bxslider -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.flexslider.js')}}"></script>
+	<!-- CD Hero slider -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/cd-hero.js')}}"></script>
+	<!-- Isotope -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/isotope.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/ini.isotope.js')}}"></script>
+	<!-- Wow Animation -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
+	<!-- SmoothScroll -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/smoothscroll.js')}}"></script>
+	<!-- Eeasing -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js')}}"></script>
+	<!-- Counter -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
+	<!-- Waypoints -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/waypoints.min.js')}}"></script>
+	<!-- Template custom -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js')}}"></script>
+	</div><!-- Body inner end -->
+</body>
+</html>
